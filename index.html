@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple jQuery Slideshow</title>
+  
+  
+  
+      <style>#slideshow {
+  margin-left: auto; margin-right: auto;
+  
+  padding: 10px;
+  ;
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}</style>  
+</head>
+
+<body>
+
+  <div id="slideshow">
+<style>
+IMG.slideshow {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+</style>   <div class="slideshow" align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22071233_266783910508446_7488912162232991744_n.jpg" class="displayed">
+   </div>
+   <div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22071325_136678166956045_8360791433854058496_n.jpg" class="displayed">
+   </div>
+   <div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22221221_137244653570374_7217366127708471296_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22351830_133419333975685_6263982962518261760_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22351866_287036185146126_3764114453520449536_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22351883_317271505408356_6540947875675766784_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22426694_490198161360461_3262173088904642560_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22426718_1699886490044999_8440979757465600000_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22426794_128585714470099_4159553617176559616_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22427486_1480478158667369_4203933071864496128_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22429596_2442484855975927_6805085336427823104_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/22429698_352833808507256_4597989964720898048_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/23161260_486431435076336_4400301785546227712_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/23164321_518005231891276_8644112215709843456_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/23164509_129071761133058_5132889877574057984_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/23279549_496103837420593_1221570659843309568_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/24274243_312422035925344_8720411369125445632_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/25007819_1689340507785091_8531581267940999168_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/25014315_1750852915219819_3561635985651400704_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/26068802_1360701354032112_5539401273645727744_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/26402662_567843040217469_7668718386804686848_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/26866387_180209149251867_7972318565418139648_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/27580358_122372788509023_8067710527796674560_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/28158689_152953032012782_3319988884921647104_n.jpg" class="displayed">
+   </div>
+<div align="center">
+     <img src="https://raw.githubusercontent.com/hoodcafe/photos/master/28428408_157285244974580_3541237772918456320_n.jpg" class="displayed">
+   </div>
+
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+  
+
+    <script>
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(7000)
+    .next()
+    .fadeIn(7000)
+    .end()
+    .appendTo('#slideshow');
+}, 8000);
+</script>
+
+
+
+
+</body>
+
+</html>
