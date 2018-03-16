@@ -24,7 +24,90 @@
 </head>
 
 <body>
+<script language="JavaScript1.2">
+<!--
 
+
+
+//Secify scroller contents
+var line=new Array()
+line[1]="Το HoodCafe είναι μια καφετέρια η οποία βρίσκεται στη Λαμία και συγκεκριμένα στην οδό Φλέμινγκ 3."
+line[2]="Σ’αυτή την καφετέρια θα βρείτε μια μεγάλη γκάμα προιόντων για όλες τις προτιμήσεις,"
+line[3]="ικανοποιόντας και τα ποιο απαιτητικά γούστα μεταξύ των οποίων κρύα ή ζεστή σοκολάτα freddo γλυκό η μέτριο"
+line[4]="και άλλα διαφορετικά ειδη όπως επίσης εκτός απο ροφήματα και ποτά μπορείτε να δοκιμάσετε σνακ"
+line[5]="και τρόφιμα συνοδευτικά με οτι πίνετε."
+line[6]="Η ποιότητα των προιόντων ειναι άριστη πράγμα που θα διαπιστώσετε και σεις όταν έρθετε,"
+line[7]="θα μείνετε ικανοποιημένοι,όπως επι σειρά ατόμων που μας έχουν επισκεφτεί έχουν μείνει "
+line[8]="ευχαριστημένοι και είναι σίγουρο πως θα θέλετε να ξαναρθείτε."
+line[9]="Η εξυπηρέτηση ειναι πολύ φιλική και γρήγορη και το μέτρο σύγκρισης σχετικά με την εξυπηρέτηση "
+line[10]=""και τα προιόντα μας ειναι ασυναγώνιστα."
+
+//Specify font size for scoller
+var ts_fontsize="16px"
+
+//--Don't edit below this line
+
+var longestmessage=1
+for (i=2;i<line.length;i++){
+if (line[i].length>line[longestmessage].length)
+longestmessage=i
+}
+
+//Auto set scroller width
+var tscroller_width=line[longestmessage].length
+
+lines=line.length-1 //--Number of lines
+
+//if IE 4+ or NS6
+if (document.all||document.getElementById){
+document.write('<form name="bannerform">')
+document.write('<input type="text" name="banner" size="'+tscroller_width+'"')
+document.write('  style="background-color: '+document.bgColor+'; color: '+document.body.text+'; font-family: verdana; font-size: '+ts_fontsize+'; font-weight:bold; border: medium none" onfocus="blur()">')
+document.write('</form>')
+}
+
+temp=""
+nextchar=-1;
+nextline=1;
+cursor="\\"
+function animate(){
+if (temp==line[nextline] & temp.length==line[nextline].length & nextline!=lines){
+nextline++;
+nextchar=-1;
+document.bannerform.banner.value=temp;
+temp="";
+setTimeout("nextstep()",1000)}
+else if (nextline==lines & temp==line[nextline] & temp.length==line[nextline].length){
+nextline=1;
+nextchar=-1;
+document.bannerform.banner.value=temp;
+temp="";
+setTimeout("nextstep()",1000)}
+else{
+nextstep()}}
+
+function nextstep(){
+
+if (cursor=="\\"){
+cursor="|"}
+else if (cursor=="|"){
+cursor="/"}
+else if (cursor=="/"){
+cursor="-"}
+else if (cursor=="-"){
+cursor="\\"}
+
+
+nextchar++;
+temp+=line[nextline].charAt(nextchar);
+document.bannerform.banner.value=temp+cursor
+setTimeout("animate()",25)}
+
+//if IE 4+ or NS6
+if (document.all||document.getElementById)
+window.onload=animate
+// -->
+</script>
   <div id="slideshow">
 <style>
 IMG.slideshow {
