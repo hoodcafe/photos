@@ -1,0 +1,183 @@
+﻿<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Accordion : Demo 81</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://bestjquery.com/tutorial/accordion/demo81/css/style.css">
+<style>
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+#accordion .panel{
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    margin-bottom: 5px;
+}
+#accordion .panel-heading{
+    padding: 0;
+    border: none;
+    border-radius: 5px 5px 0 0;
+}
+#accordion .panel-title a{
+    display: block;
+    padding: 20px 30px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #ea526f;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+#accordion .panel-title a.collapsed{
+    border-color: #e0e0e0;
+    border-radius: 5px;
+}
+#accordion .panel-title a:before,
+#accordion .panel-title a.collapsed:before,
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after{
+    content: "\f103";
+    font-family: fontawesome;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #ea526f;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after{
+    content: "\f101";
+    background: transparent;
+    color: #000;
+    opacity: 0;
+    transform: scale(0);
+}
+#accordion .panel-title a.collapsed:before{
+    opacity: 0;
+    transform: scale(0);
+}
+#accordion .panel-title a.collapsed:after{
+    opacity: 1;
+    transform: scale(1);
+}
+#accordion .panel-body{
+    padding: 20px 30px;
+    background: #ea526f;
+    border-top: none;
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    letter-spacing: 1px;
+    border-radius: 0 0 5px 5px;
+}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  
+</head>
+<body>
+    <div id="header" class="container-fluid">
+        
+    </div>
+
+    <div class="demo">
+        <div class="container">
+            <div class="row text-center">
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="height:500px;width:700px;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        ΦΩΤΟΓΡΑΦΙΚΟ ΥΛΙΚΟ
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p><object data="https://cdn.rawgit.com/hoodcafe/photos/master/index.html" width="700" height="900"></object> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ΚΑΤΑΛΟΓΟΣ ΠΡΟΙΟΝΤΩΝ
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        ΠΡΟΕΠΙΣΚΟΠΙΣΗ ΠΕΡΙΛΗΨΗΣ ΒΙΟΓΡΑΦΙΚΟΥ ΣΗΜΕΙΩΜΑΤΟΣ
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+        
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</body></html>
